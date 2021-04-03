@@ -65,6 +65,14 @@ app.get('/', (req, res) => {
     //         throw err;
     //     res.end('FIle successfully deleted!');
     // });
+
+
+    fs.writeFile('index.html', 'This is another HTML file', (err) => {
+        if (err)
+            throw err;
+
+        res.end('file successfully created!');
+    });
 });
 
 
