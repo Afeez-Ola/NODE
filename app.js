@@ -50,13 +50,20 @@ app.get('/', (req, res) => {
     // });
 
 
+    // RENAME A FILE
+    // fs.rename('index.html', 'app.html', (err) => {
+    //     if (err)
+    //         throw err;
 
-    fs.rename('index.html', 'app.html', (err) => {
+    //     res.end('File successfully renamed!');
+    // });
+
+
+    fs.unlink('app.html', (err) => {
         if (err)
             throw err;
-
-        res.end('File successfully renamed!');
-    })
+        res.end('FIle successfully deleted!');
+    });
 });
 
 
