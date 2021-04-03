@@ -30,13 +30,14 @@ app.get('/', (req, res) => {
     //     res.end(data);
     // });
 
-    const content = 'He is a stupid boy and onishina';
+    // WRITE A FILE
+    // const content = 'Chelsea were fucked big time by West brom!';
+    // fs.writeFile('index.html', content, (err) => {
+    //     if (err)
+    //         throw err;
 
-    fs.writeFile('index.html', content, (err) => {
-        if (err)
-            throw err;
-        res.end('Its saved')
-    })
+    //     res.end(content)
+    // })
 });
 
 
