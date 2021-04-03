@@ -68,12 +68,12 @@ app.get('/', (req, res) => {
 
 
 
-    fs.appendFile('new_index.html', 'This is some new old content', (err) => {
+    fs.rename('new_index.html', 'index.html', (err) => {
         if (err)
             throw err;
 
-        res.end('File successfully appended!');
-    });
+        res.end('File successfully renamed to its former name!')
+    })
 
 });
 
