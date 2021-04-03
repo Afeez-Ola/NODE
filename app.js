@@ -22,7 +22,21 @@ const app = express();
 
 
 app.get('/', (req, res) => {
+    // READ A FILE
+    // fs.readFile('index.html', (err, data) => {
+    //     if (err)
+    //         throw err;
 
+    //     res.end(data);
+    // });
+
+    const content = 'He is a stupid boy and onishina';
+
+    fs.writeFile('index.html', content, (err) => {
+        if (err)
+            throw err;
+        res.end('Its saved')
+    })
 });
 
 
