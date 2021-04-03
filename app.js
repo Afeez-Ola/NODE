@@ -59,11 +59,12 @@ app.get('/', (req, res) => {
     // });
 
 
-    fs.unlink('app.html', (err) => {
-        if (err)
-            throw err;
-        res.end('FIle successfully deleted!');
-    });
+    // DELETING A FILE
+    // fs.unlink('app.html', (err) => {
+    //     if (err)
+    //         throw err;
+    //     res.end('FIle successfully deleted!');
+    // });
 });
 
 
