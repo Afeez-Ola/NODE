@@ -1,21 +1,64 @@
 // jshint esversion:6
-const fs = require('fs');
 const express = require('express');
+const fs = require('fs')
 
 const app = express();
 
-app.get("/", (req, res) => {
-    res.writeHead(200, { "content-Type": 'audio/mp3' });
 
-    fs.exists('01 - Eraser.mp3', (exists) => {
-        if (exists) {
-            const rStream = fs.createReadStream('01 - Eraser.mp3')
-            rStream.pipe(res)
-        } else {
-            res.end('Error 404')
-        }
-    })
+// app.get('/', (req, res) => {
+//     res.writeHead(200, { "content-Type": "audio/mp3" });
+
+//     fs.exists('01 - Eraser.mp3', (exists) => {
+//         if (exists) {
+//             const rStream = fs.createReadStream('01 - Eraser.mp3');
+
+//             rStream.pipe(res);
+//         } else {
+//             res.end('Error 404')
+//         }
+//     });
+// });
+
+
+
+app.get('/', (req, res) => {
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const PORT = process.env.PORT || 3000;
 
