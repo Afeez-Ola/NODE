@@ -39,13 +39,24 @@ app.get('/', (req, res) => {
     //     res.end(content)
     // })
 
-    const new_content = ' And they will probably loose again on Tuesday or Thursday!';
-    fs.appendFile('index.html', new_content, (err) => {
+
+    // APPEND A FILE
+    // const new_content = ' And they will probably loose again on Tuesday or Thursday!';
+    // fs.appendFile('index.html', new_content, (err) => {
+    //     if (err)
+    //         throw err;
+
+    //     res.end('Successfully Appended!');
+    // });
+
+
+
+    fs.rename('index.html', 'app.html', (err) => {
         if (err)
             throw err;
 
-        res.end('Successfully Appended!');
-    });
+        res.end('File successfully renamed!');
+    })
 });
 
 
