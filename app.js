@@ -67,19 +67,14 @@ app.get('/', (req, res) => {
     // });
 
 
-    // fs.writeFile('index.html', 'This is another HTML file', (err) => {
-    //     if (err)
-    //         throw err;
 
-    //     res.end('file successfully created!');
-    // });
-
-    fs.rename('index.html', 'new_index.html', (err) => {
+    fs.appendFile('new_index.html', 'This is some new old content', (err) => {
         if (err)
             throw err;
 
-        res.end('file successfully renamed!')
-    })
+        res.end('File successfully appended!');
+    });
+
 });
 
 
