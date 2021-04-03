@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
         if (err)
             throw err;
 
-        res.end('SUccessfully Appended!')
+        res.end('Successfully Appended!')
     })
 });
 
