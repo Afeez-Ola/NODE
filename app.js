@@ -67,12 +67,19 @@ app.get('/', (req, res) => {
     // });
 
 
-    fs.writeFile('index.html', 'This is another HTML file', (err) => {
+    // fs.writeFile('index.html', 'This is another HTML file', (err) => {
+    //     if (err)
+    //         throw err;
+
+    //     res.end('file successfully created!');
+    // });
+
+    fs.rename('index.html', 'new_index.html', (err) => {
         if (err)
             throw err;
 
-        res.end('file successfully created!');
-    });
+        res.end('file successfully renamed!')
+    })
 });
 
 
